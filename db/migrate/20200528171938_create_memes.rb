@@ -4,9 +4,9 @@ class CreateMemes < ActiveRecord::Migration[6.0]
       t.string :title
       t.string :type
       t.string :source
-      t.integer :votes_count
-      t.integer :comments_count
-      t.references :category, null: false, foreign_key: true
+      t.integer :votes_count, default: 0
+      t.integer :comments_count, default: 0
+      t.references :category, null: false, foreig_nkey: true
       t.references :user, null: false, foreign_key: true
 
       t.timestamps
