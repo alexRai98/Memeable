@@ -8,7 +8,11 @@
 /.bundle
 
 
+<<<<<<< HEAD
 ./config/database.yml
+=======
+/config/database.yml
+>>>>>>> 25d8a7365ee2b2ba9a30c2d4bbaf6c644080e61e
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
