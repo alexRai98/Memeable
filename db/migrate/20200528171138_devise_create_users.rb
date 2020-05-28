@@ -33,7 +33,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.0]
       # t.datetime :locked_at
 
       t.string :username 
-      t.integer :memes_count
+      t.integer :memes_count, default: 0
 
       t.timestamps null: false
     end
