@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_28_191351) do
+ActiveRecord::Schema.define(version: 2020_05_28_211624) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 2020_05_28_191351) do
   end
 
   create_table "comments", force: :cascade do |t|
-    t.text "boby"
+    t.text "body"
     t.bigint "user_id", null: false
     t.bigint "meme_id", null: false
     t.datetime "created_at", precision: 6, null: false
@@ -48,6 +48,11 @@ ActiveRecord::Schema.define(version: 2020_05_28_191351) do
   create_table "memes_tags", id: false, force: :cascade do |t|
     t.bigint "meme_id", null: false
     t.bigint "tag_id", null: false
+  end
+
+  create_table "memes_users", id: false, force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "meme_id", null: false
   end
 
   create_table "tags", force: :cascade do |t|
