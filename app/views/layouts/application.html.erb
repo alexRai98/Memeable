@@ -10,14 +10,20 @@
   </head>
 
   <body>
-    <%= link_to "By Popularity", popular_path%>
-    <%if user_signed_in?%>
-      <%=link_to "Log Out", destroy_user_session_path, method: :delete%>
-      <%= link_to "Create Meme", new_meme_path%>
-    <%else%>
-      <%=link_to "Login", new_user_session_path%>
-    <%end%>
-    
+    <header>
+      <%=link_to "Home", root_path%>      
+      <%=link_to "By Category", categories_path%>      
+      <%=link_to "By Popularity", popular_path%> 
+      <%=link_to "Search"%>           
+      <%if user_signed_in?%>
+        <%=link_to "Create Meme", new_meme_path%> 
+        <p>Welcome, <%=current_user.username%></p>
+        <%=link_to "My Account"%>
+        <p><%=link_to "Log Out", destroy_user_session_path, method:"delete"%></p>        
+      <%else%>        
+        <%=link_to "Login", new_user_session_path %>                
+      <%end%>
+    </header>
     <p class="notice"><%= notice%></p>
     <p class="alert"><%= alert%></p>
     <%= yield %>
