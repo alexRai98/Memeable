@@ -3,8 +3,8 @@
 
 <% @memes.each do |group, mems|%>
   <h1><%= group%></h1>
-  <% mems.map(&:source).each do |img|%>
-  <%= image_tag (img)%>
+  <% mems.each(&:source).each do |img|%>
+    image_tag("/#{img}")
   <% end %>
 <% end %>
 
