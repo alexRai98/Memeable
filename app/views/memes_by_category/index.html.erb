@@ -1,0 +1,10 @@
+<h1>MemesByCategory</h1>
+<%@categories.each do |category|%>
+    <p><%=category.name%> </P>
+    <ul>
+    <%category.memes.each do |meme|%>
+        <%= link_to (image_tag("/#{meme.source}")) ,  meme_path(meme)%>
+        <li> <%=meme.title%> </li>
+    <%end%>
+    </ul>
+<%end%>
