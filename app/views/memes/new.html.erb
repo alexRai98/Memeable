@@ -1,0 +1,29 @@
+<h1>Create a meme!</h1>
+<%= form_for(@meme) do |f| %>
+  <ul>
+  <% @meme.errors.full_messages.each do |error| %>
+    <li><%= error %></li>
+  <% end %>
+  </ul>
+
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :source %><br />
+    <%= f.text_field :source %>
+  </p>
+  <p>
+    <%= f.label :type %><br />
+    <%= f.select :type, Meme.types.keys.to_a %>
+  </p>
+  <p>
+    <%= f.label :category %><br />
+    <%= f.collection_select :category_id, Category.all, :id, :name%>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+
