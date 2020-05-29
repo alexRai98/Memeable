@@ -1,0 +1,13 @@
+<h1> <%= @meme.title%> </h1>
+ <%= image_tag ("/#{@meme.source}")%>
+<p>Votos: <%=@meme.votes_count%> </p>
+<p>Comentarios: <%=@meme.comments_count%> </p>
+<p>Category: <%=@meme.category.name%> </p>
+<%= form_for(@meme) do |f| %>
+    <%if @meme.voters.find(current_user.id)%>
+        <%= link_to  "Unvote", model %>
+    <%else%>
+        <%= link_to  "Vote", model ,method: :delete %>
+    <%end%>
+<% end %>
+

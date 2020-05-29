@@ -14,6 +14,14 @@ class MemesController < ApplicationController
     end 
   end 
 
+  def show
+    @meme  = Meme.find(params[:id])
+  end
+
+  def update
+
+  end
+
   private 
   def meme_params
     params.require(:meme).permit(:title, :source, :type, :category_id)

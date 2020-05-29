@@ -4,7 +4,7 @@
 
 <% @memes.each do |date, mems|%>
   <h1><%= date.strftime('%A, %b %-d')%></h1>
-  <% mems.map(&:source).each do |img|%>
+  <% mems.each(&:source).each do |img|%>
   <%= image_tag (img)%>
   <% end %>
 <% end %>
