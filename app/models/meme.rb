@@ -9,6 +9,10 @@ class Meme < ApplicationRecord
   has_many :comments
   validates :title, uniqueness: true, presence: true
   validates :source, presence: true
+  validates :type, presence: true
+  validates :source, format: { with: /\Ahttps:\/\/.+(.jpg|.png|.gif)\z/}
+
+  enum type: {image: "image", gif: "gif"}
 
   private
 
