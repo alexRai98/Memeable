@@ -3,11 +3,11 @@
 <p>Votos: <%=@meme.votes_count%> </p>
 <p>Comentarios: <%=@meme.comments_count%> </p>
 <p>Category: <%=@meme.category.name%> </p>
-<%= form_for(@meme) do |f| %>
-    <%if @meme.voters.find(current_user.id)%>
-        <%= link_to  "Unvote", model %>
-    <%else%>
-        <%= link_to  "Vote", model ,method: :delete %>
-    <%end%>
-<% end %>
+
+<%if @meme.voters.ids.include?(current_user.id)%>
+    <%= link_to  "Unvote", vote_path ,method: :delete %>
+<%else%>
+    <%= link_to  "Vote", votes_path(@meme),method: :post %>
+<%end%>
+
 

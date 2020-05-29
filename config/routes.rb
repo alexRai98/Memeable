@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
  
- # resources :users,only: [:new,:create]
+  resources :votes, only: [:create ,:destroy]
   get '/categories' ,to: 'memes_by_category#index' 
   root to:'home#index'
   devise_for :users
