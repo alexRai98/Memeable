@@ -14,6 +14,10 @@ class MemesController < ApplicationController
     end 
   end 
 
+  def popularity
+    @memes = Meme.all.order(votes_count: :desc)
+  end 
+
   private 
   def meme_params
     params.require(:meme).permit(:title, :source, :type, :category_id)
