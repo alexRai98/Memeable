@@ -5,8 +5,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   validates :username, uniqueness: true, presence: true     
-  has_many :votes 
-  has_many :meme
+  has_many :votes
+  has_many :memes
   
   private
 

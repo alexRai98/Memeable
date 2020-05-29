@@ -1,3 +1,3 @@
 class Tag < ApplicationRecord
-    has_and_belongs_to_many :meme
+    has_and_belongs_to_many :memes
 end
