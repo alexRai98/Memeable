@@ -10,7 +10,9 @@ class Meme < ApplicationRecord
   enum type: { image: "image", gif: "gif"}
   validates :source, presence: true, format: { with: /\Ahttps:\/\/.+(.jpg|.png|.gif)\z/}
   validates :type, presence: true
-
+  validates :title, uniqueness: true, presence: true
+  
+  private
   def votes_comments_count_defauld
     self.votes_count = 0
     self.comments_count = 0
