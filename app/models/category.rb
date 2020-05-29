@@ -1,3 +1,4 @@
 class Category < ApplicationRecord
-  has_many :meme  
+  has_many :memes
+  validates :name, uniqueness: true, presence: true
 end
