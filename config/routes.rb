@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
+ 
+  resources :votes, only: [:create ,:destroy]
+  get '/categories' ,to: 'memes_by_category#index' 
   root to:'home#index'
   devise_for :users
-  resources :memes, only:[:show, :new, :create]
+  resources :memes, only:[:show, :new, :create, :update]
   get '/popular',to: 'memes#popularity'
+
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

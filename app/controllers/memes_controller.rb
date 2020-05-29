@@ -13,7 +13,15 @@ class MemesController < ApplicationController
       render :new
     end 
   end 
+  
+  def show
+    @meme  = Meme.find(params[:id])
+  end
 
+  def update
+
+  end
+  
   def popularity
     @memes = Meme.all.order(votes_count: :desc)
   end 

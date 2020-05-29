@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_28_211624) do
+ActiveRecord::Schema.define(version: 2020_05_29_041709) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,11 +48,6 @@ ActiveRecord::Schema.define(version: 2020_05_28_211624) do
   create_table "memes_tags", id: false, force: :cascade do |t|
     t.bigint "meme_id", null: false
     t.bigint "tag_id", null: false
-  end
-
-  create_table "memes_users", id: false, force: :cascade do |t|
-    t.bigint "user_id", null: false
-    t.bigint "meme_id", null: false
   end
 
   create_table "tags", force: :cascade do |t|
