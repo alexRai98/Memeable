@@ -1,6 +1,10 @@
 <h1>MemesByCategory</h1>
-<%@memes.each do |meme|%>
-    <%meme.categories.each do |categori|%>
-        <p><%=category.name%> </P>
+<%@categories.each do |category|%>
+    <p><%=category.name%> </P>
+    <ul>
+    <%category.memes.each do |meme|%>
+        <li> <%=meme.title%> </li>
+        <li> <%=meme.source%> </li>
     <%end%>
+    </ul>
 <%end%>

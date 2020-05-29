@@ -1,5 +1,5 @@
 class MemesByCategoryController < ApplicationController
   def index
-    @memes = Memes.all
+    @categories = Category.all
   end
 end
