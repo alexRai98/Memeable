@@ -1,10 +1,11 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
 
-<% @memes.each do |group, mems|%>
-  <h1><%= group%></h1>
-  <% mems.map(&:source).each do |img|%>
-  <%= image_tag (img)%>
+<% @memes.each do |date, mems|%>
+  <h1><%= date.strftime('%A, %b %-d')%></h1>
+  <% mems.each do |mem|%>
+  <%= link_to image_tag(mem.source),meme_path(mem)  %>
+  <p>Created by: <%= mem.owner.username%></p>
   <% end %>
 <% end %>
+
+
 
