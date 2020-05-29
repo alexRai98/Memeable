@@ -1,9 +1,11 @@
 
 <% @memes.each do |date, mems|%>
-  <h1><%= date.strftime('%A, %b %-d')%></h1>
+  <h1 class="meme_date"><%= date.strftime('%A, %b %-d')%></h1>
   <% mems.each do |mem|%>
-  <%= link_to image_tag(mem.source),meme_path(mem)  %>
-  <p>Created by: <%= mem.owner.username%></p>
+    <div class="meme_container">
+      <%= link_to image_tag(mem.source),meme_path(mem)  %>
+      <p>Created by: <%= mem.owner.username%></p>
+    </div>
   <% end %>
 <% end %>
 
