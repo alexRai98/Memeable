@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   validates :username, uniqueness: true, presence: true     
   has_many :votes 
+  has_many :memes
 end
 
 
