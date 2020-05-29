@@ -1,7 +1,6 @@
 <h1> <%= @meme.title%> </h1>
- <%= image_tag ("/#{@meme.source}")%>
+ <%= image_tag (@meme.source)%>
 <p>Votos: <%=@meme.votes_count%> </p>
-<p>Comentarios: <%=@meme.comments_count%> </p>
 <p>Category: <%=@meme.category.name%> </p>
 
 <%if @meme.voters.ids.include?(current_user.id)%>
@@ -10,4 +9,7 @@
     <%= link_to  "Vote", votes_path(@meme),method: :post %>
 <%end%>
 
-
+<p>Comentarios: </p>
+<%@meme.comments.each do |comment|%>
+    <p><%= comment.body%> </p>
+<%end%>
