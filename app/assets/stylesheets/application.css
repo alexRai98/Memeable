@@ -24,6 +24,11 @@
 
     }
 
+    .form {
+        
+        padding-left: 15px;
+    }
+  
     .submit-btn {
         width: 98px;
         height: 31px;
@@ -33,11 +38,18 @@
         margin-top: 10px;
     }
 
+    .cancel-btn {
+        width: 136px;
+        margin-left: 15px;
+    }
+
     .input-field {
         width: 372px;
         height: 35px;
         border: 1px solid #000000;
         margin-top: 10px;
+        font-size: 20px;
+        font-family:'Lilita One'; 
     }
 
     .select_field {
@@ -45,11 +57,19 @@
         border: 1px solid #000000;
         width: 160px;
         height: 35px;
+        font-size: 16px;
+        font-family:'Lilita One'; 
+    }
+
+    .category_field {
+        color: #c4c4c4
     }
 
     .link-form {
         color: #78CFBA;
         text-decoration: none;
+        margin-left: 15px;
+        padding-bottom: 15px;
        
     }
 
@@ -98,6 +118,7 @@
         align-items: center;
         border-top: 1px #000000 solid;
         padding-top: 25px;
+        margin-top: 21px;
     }
     .team{
         display: flex;
