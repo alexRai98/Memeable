@@ -1,15 +1,25 @@
 <h1> <%= @meme.title%> </h1>
  <%= image_tag (@meme.source)%>
-<p>Votos: <%=@meme.votes_count%> </p>
 <p>Category: <%=@meme.category.name%> </p>
-
-<%if @meme.voters.ids.include?(current_user.id)%>
-    <%= link_to  "Unvote", vote_path ,method: :delete %>
+<p>Votes: <%=@meme.votes_count%> </p>
+<%if user_signed_in?%>
+    <%if @meme.voters.ids.include?(current_user.id)%>
+        <%= link_to  "Unvote", vote_path ,method: :delete %>
+    <%else%>
+        <%= link_to  "Vote", votes_path(@meme),method: :post %>
+    <%end%>
 <%else%>
-    <%= link_to  "Vote", votes_path(@meme),method: :post %>
+    <p>Login to vote </p>
 <%end%>
-
-<p>Comentarios: </p>
+<p>Comments: </p>
+<%if user_signed_in?%>
+    <%= form_for @comment , url: meme_comments_path(@meme) do |f| %>
+        <%= f.text_area :body%>
+        <%= f.submit %>
+    <% end %>
+<%else%>
+    <p> Login to comment</p>
+<%end%>
 <%@meme.comments.each do |comment|%>
     <p><%= comment.body%> </p>
 <%end%>

@@ -7,7 +7,7 @@ class User < ApplicationRecord
   validates :username, uniqueness: true, presence: true       
   has_many :votes 
   has_many :memes
- 
+  has_many :comments
   private
 
   def memes_count_defauld
