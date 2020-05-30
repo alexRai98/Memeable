@@ -27,6 +27,9 @@
         text-decoration: none;
         color: #000000;
     }
+    a:hover{
+        color: #78CFBA;
+    }
     li{
         list-style: none;
     }
@@ -55,9 +58,7 @@
         margin-left: 20px;
         padding-bottom: 10px;
     }
-    .navbar-menu a:hover, .team a:hover{
-        color: #78CFBA;
-    }
+    
     /********* end navbar *********/
 
     /********* start footer *********/
