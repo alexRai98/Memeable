@@ -8,22 +8,22 @@
 
   <p class= "form_field">
     <div class= "label"><%= f.label :title %><br /></div>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, :class => "input-field"%>
   </p>
   <p class="form_field">
     <div class= "label"><%= f.label :source %><br /></div>
-    <%= f.text_field :source %>
+    <%= f.text_field :source , :class => "input-field"%>
   </p>
   <p class="form_field">
     <div class= "label"><%= f.label :type %><br /></div>
-    <%= f.select :type, Meme.types.keys.to_a %>
+    <%= f.select :type, Meme.types.keys.to_a , {}, {:class => "select_field"}%>
   </p>
   <p class="form_field"> 
     <div class= "label"><%= f.label :category %><br /></div>
-    <%= f.collection_select :category_id, Category.all, :id, :name%>
+    <%= f.collection_select :category_id, Category.all, :id, :name, {}, :class => "select_field"%>
   </p>
   <p class="form_field">
-    <%= f.submit %>
+    <%= f.submit "Create!", :class => "submit-btn" %>
   </p>
 <% end %>
 

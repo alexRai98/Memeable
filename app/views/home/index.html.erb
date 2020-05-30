@@ -1,7 +1,7 @@
 
 
 <% @memes.each do |date, mems|%>
-  <h1 class="meme_date"><%= date.strftime('%A, %b %-d')%></h1>
+  <h1 class="page_title"><%= date.strftime('%A, %b %-d')%></h1>
   <div class= "meme_container">
   <% mems.each do |mem|%>
     <div class= "meme_img_owner"> 
