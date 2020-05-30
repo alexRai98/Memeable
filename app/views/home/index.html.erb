@@ -1,13 +1,17 @@
 
+
 <% @memes.each do |date, mems|%>
   <h1 class="meme_date"><%= date.strftime('%A, %b %-d')%></h1>
+  <div class= "meme_container">
   <% mems.each do |mem|%>
-    <div class="meme_container">
-      <%= link_to image_tag(mem.source),meme_path(mem)  %>
-      <p>Created by: <%= mem.owner.username%></p>
+    <div class= "meme_img_owner"> 
+    <div class ="meme_img_container"><%= link_to image_tag((mem.source), :class => "meme_img"),meme_path(mem)%></div>
+    <p class ="meme_owner">created by : <span class="owner_name"><%= mem.owner.username%></span></p>
     </div>
-  <% end %>
+  <% end %> 
+ </div>
 <% end %>
+
 
 
 

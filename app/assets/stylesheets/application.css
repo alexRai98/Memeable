@@ -14,5 +14,7 @@
  *= require_self
  */
     body {
-        font-family: 'Lilita One', cursive;
+        font-family: 'Lilita One';
+        font-style: normal;
+
     }
