@@ -4,10 +4,15 @@
     <ul>
     <div class= "meme_container">
     <%category.memes.each do |meme|%>
+<<<<<<< HEAD
         <div class= "meme_img_owner"> 
         <div class ="meme_img_container"><%= link_to image_tag((meme.source),:class => "meme_img") ,meme_path(meme)%></div>
         <li class ="meme_owner"> created by: <span class="owner_name"><%=meme.owner.username%></span> </li>
         </div>
+=======
+        <%= link_to (image_tag(meme.source)) ,  meme_path(meme)%>
+        <li> <%=meme.title%> </li>
+>>>>>>> afc08c0e731ca6fab57c000952ab0c0a00626e2b
     <%end%>
     </div>
     </ul>

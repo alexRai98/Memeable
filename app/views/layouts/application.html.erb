@@ -11,34 +11,46 @@
   </head>
 
   <body>
-    <header>
-      <%=link_to "Home", root_path%>      
-      <%=link_to "By Category", categories_path%>      
-      <%=link_to "By Popularity", popular_path%> 
-      <%=link_to "Search"%>           
-      <%if user_signed_in?%>
-        <%=link_to "Create Meme", new_meme_path%> 
-        <p>Welcome, <%=current_user.username%></p>
-        <%=link_to "My Account"%>
-        <p><%=link_to "Log Out", destroy_user_session_path, method:"delete"%></p>        
-      <%else%>        
-        <%=link_to "Login", new_user_session_path %>                
-      <%end%>
-    </header>
-    <p class="notice"><%= notice%></p>
-    <p class="alert"><%= alert%></p>
-    <%= yield %>
+    <main class="main">
+      <header class="navbar">
+        <nav class="navbar-menu">
+          <ul>
+            <%= link_to image_tag( "logo.svg" ,class: "navbar-logo"), root_path%>
+            <li> <%=link_to "By Category", categories_path%> </li>
+            <li> <%= link_to "By Popularity", popular_path %> </li>
+            <%if user_signed_in?%>              
+              <li> <%= link_to "Search", root_path %> </li>
+              <li> <%= link_to "Create Meme", new_meme_path%> </li>
+            <%end%>
+          </ul>
+        </nav>
+        <nav class="navbar-menu">
+          <ul>
+            <%if user_signed_in?%>
+              <li> <%=link_to "Log Out", destroy_user_session_path, method: :delete%> </li>
+              <li> <span> Welcome, <%= current_user.username%> <span> </li>
+              <li> <%=link_to "My Account", account_details_path%> </li>
+            <%else%>
+              <li> <%=link_to "Login", new_user_session_path%> </li>
+            <%end%>
+          </ul>
+        </nav>
+      </header>
+      <div class="notice"><%= notice%></div>
+      <div class="alert"><%= alert%></div>
+      <%= yield %>
 
-    <footer class="footer">
-      <div class="team">
-        <%= link_to  "alexRai98", "https://github.com/alexRai98" ,target:  "_blank" %>
-        <%= link_to  "gpanedra",  "https://github.com/gpanebra",target:  "_blank" %>
-        <%= link_to  "Saidab1", "https://github.com/Saidab1",target:  "_blank" %>
-
-      </div>
-      <div class="codeable">
-        <p> Codeable #2</p>
-      </div>
-    </footer>
+      <footer class="footer">
+        <div class="team"> 
+          <p> Made by: <p>
+          <%= link_to  "Rai", "https://github.com/alexRai98" ,target:  "_blank" %>
+          <%= link_to  "Gustavo",  "https://github.com/gpanebra",target:  "_blank" %>
+          <%= link_to  "Saida", "https://github.com/Saidab1",target:  "_blank" %>
+        </div>
+        <div class="codeable">
+          <p> Codeable #2</p>
+        </div>
+      </footer>
+    </main>
   </body>
 </html>
