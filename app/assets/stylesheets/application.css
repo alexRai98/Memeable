@@ -40,10 +40,20 @@ body {
   cursor: pointer;
 }
 
+<<<<<<< HEAD
 .cancel-btn {
   width: 136px;
   margin-left: 15px;
 }
+=======
+    .submit-btn:hover{
+        color: #78CFBA;
+    }
+    .cancel-btn {
+        width: 136px;
+        margin-left: 15px;
+    }
+>>>>>>> 96a54066052b4e92e773672893608094da2c8f11
 
 .input-field {
   width: 372px;

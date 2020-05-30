@@ -1,25 +1,38 @@
-<h1> <%= @meme.title%> </h1>
- <%= image_tag (@meme.source)%>
-<p>Category: <%=@meme.category.name%> </p>
-<p>Votes: <%=@meme.votes_count%> </p>
-<%if user_signed_in?%>
-    <%if @meme.voters.ids.include?(current_user.id)%>
-        <%= link_to  "Unvote", vote_path ,method: :delete %>
-    <%else%>
-        <%= link_to  "Vote", votes_path(@meme),method: :post %>
-    <%end%>
-<%else%>
-    <p>Login to vote </p>
-<%end%>
-<p>Comments: </p>
-<%if user_signed_in?%>
-    <%= form_for @comment , url: meme_comments_path(@meme) do |f| %>
-        <%= f.text_area :body%>
-        <%= f.submit %>
-    <% end %>
-<%else%>
-    <p> Login to comment</p>
-<%end%>
-<%@meme.comments.each do |comment|%>
-    <p><%= comment.body%> </p>
-<%end%>
+<section class="meme-details">
+    <h1 class="meme-details__title"> <%= @meme.title%> </h1>
+    <%= image_tag((@meme.source), class: "meme-details__img")%>
+    <div class="meme-category-votes">
+        <p>Category:<span class="meme__count"> <%=@meme.category.name%></span> </p>
+        <p>Votes: 
+            <span class="meme__count"> <%=@meme.votes_count%></span> 
+            <%if user_signed_in?%>
+                <%if @meme.voters.ids.include?(current_user.id)%>
+                    <%= link_to  "Unvote", vote_path ,method: :delete , class: "submit-btn" %>
+                <%else%>
+                    <%= link_to  "Vote!", votes_path(@meme),method: :post , class: "submit-btn" %>
+                <%end%>
+            <%else%>
+                <span class="meme-logeate">Login to vote </span>
+            <%end%>
+        </p>
+    </div>
+    <div class="meme-details__comments">
+        <p class="categories">Comments: </p>
+        <%if user_signed_in?%>
+            <%= form_for @comment , url: meme_comments_path(@meme) do |f| %>
+                <%= f.text_area :body, class: "comment__body",placeholder: "Rigth a new comment here..."%>
+                <%= f.submit "Comment!", class: "submit-btn btn-comment" %>
+            
+            <% end %>
+        <%else%>
+            <p class="meme-logeate"> Login to comment</p>
+        <%end%>
+        <%@meme.comments.each do |comment|%>
+            <div class="meme-comments">
+                <p class="meme-comment__owner"><%= comment.user.username%> </p>
+                <p class="meme-comment__body"><%= comment.body%> </p>
+            </div>
+        <%end%>
+    </div>
+</section>
+

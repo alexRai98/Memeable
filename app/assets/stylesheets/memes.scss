@@ -3,4 +3,53 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 
+/////// start memes-show ////////
+.meme-details{
+    max-width: 450px;
+    text-align: center;
+    margin: 7px auto;
+}
+.meme-details__img{
+    width: 100%;
+}
+.meme-category-votes{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.meme__count{
+    border: 1px #181F33 solid;
+    border-radius: 10px;
+    background-color: #181F33;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 0px 5px;
+    margin-left: 5px;
+}
+.meme-details__comments{
+    text-align: start;
+}
+.new_comment{
+    display: flex;
+    flex-direction: column;
+}
+.comment__body{
+    border-radius: 10px;
+    padding: 5px 10px;
+    outline: none; 
+}
+.btn-comment{
+    align-self: flex-end;
+    margin-bottom: 10px !important;
+}
+.meme-comments{
+    border: 1px #000000 solid;
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+}
+.meme-comment__owner{
+    color: #78CFBA;
+}
+/////// end memes-show ////////
 
