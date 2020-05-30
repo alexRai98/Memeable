@@ -1,0 +1,2 @@
+module MemesByCategoryHelper
+end
