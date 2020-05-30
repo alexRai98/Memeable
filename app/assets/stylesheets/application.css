@@ -13,96 +13,117 @@
  *= require_tree .
  *= require_self
  */
- * {
-    padding: 0;
-    margin: 0;
-    }
+* {
+  padding: 0;
+  margin: 0;
+}
 
-    body{ 
-        font-family: 'Lilita One';
-        font-style: normal;
+body {
+  font-family: "Lilita One";
+  font-style: normal;
+}
 
-    }
+.form {
+  padding-left: 15px;
+}
 
-    .submit-btn {
-        width: 98px;
-        height: 31px;
-        background-color: #e5e5e5;
-        border: 1px solid #000000;
-        margin-bottom: 30px;
-        margin-top: 10px;
-    }
+.submit-btn {
+  width: 98px;
+  height: 31px;
+  background-color: #e5e5e5;
+  border: 1px solid #000000;
+  margin-bottom: 30px;
+  margin-top: 10px;
+  font-family: arial;
+}
+.submit-btn:hover {
+  cursor: pointer;
+}
 
-    .input-field {
-        width: 372px;
-        height: 35px;
-        border: 1px solid #000000;
-        margin-top: 10px;
-    }
+.cancel-btn {
+  width: 136px;
+  margin-left: 15px;
+}
 
-    .select_field {
-        background-color: #ffffff;
-        border: 1px solid #000000;
-        width: 160px;
-        height: 35px;
-    }
+.input-field {
+  width: 372px;
+  height: 35px;
+  border: 1px solid #000000;
+  margin-top: 10px;
+  font-size: 20px;
+  font-family: "Lilita One";
+}
 
-    .link-form {
-        color: #78CFBA;
-        text-decoration: none;
-       
-    }
+.select_field {
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  width: 160px;
+  height: 35px;
+  font-size: 16px;
+  font-family: "Lilita One";
+}
 
-    a{
-        text-decoration: none;
-        color: #000000;
-    }
-    a:hover{
-        color: #78CFBA;
-    }
-    li{
-        list-style: none;
-    }
-    .main{
-        max-width: 1024px;
-        margin: 0px auto;
-        
-    }
+.category_field {
+  color: #c4c4c4;
+}
 
-    /********* start navbar *********/
-    .navbar{
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-        border-bottom: 1px #000000 solid;
-        padding-bottom: 10px;
-    }
-    .navbar-logo{
-        width: 100px;
-    }
-    .navbar-menu ul{
-        display: flex;
-        align-items: flex-end;
-    }
-    .navbar-menu li{
-        margin-left: 20px;
-        padding-bottom: 10px;
-    }
-    
-    /********* end navbar *********/
+.link-form {
+  color: #78cfba;
+  text-decoration: none;
+  margin-left: 15px;
+  padding-bottom: 15px;
+}
 
-    /********* start footer *********/
-    .footer{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        border-top: 1px #000000 solid;
-        padding-top: 25px;
-    }
-    .team{
-        display: flex;
-    }
-    .team a{
-        margin-left: 10px;
-    }
-    /********* end footer ********/
+a {
+  text-decoration: none;
+  color: #000000;
+}
+a:hover {
+  color: #78cfba;
+}
+li {
+  list-style: none;
+}
+.main {
+  max-width: 1024px;
+  margin: 0px auto;
+}
+
+/********* start navbar *********/
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 1px #000000 solid;
+  padding-bottom: 10px;
+}
+.navbar-logo {
+  width: 100px;
+}
+.navbar-menu ul {
+  display: flex;
+  align-items: flex-end;
+}
+.navbar-menu li {
+  margin-left: 20px;
+  padding-bottom: 10px;
+}
+
+/********* end navbar *********/
+
+/********* start footer *********/
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 1px #000000 solid;
+  padding-top: 25px;
+  margin-top: 21px;
+}
+.team {
+  display: flex;
+}
+.team a {
+  margin-left: 10px;
+}
+/********* end footer ********/
