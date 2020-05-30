@@ -38,6 +38,9 @@
         margin-top: 10px;
     }
 
+    .submit-btn:hover{
+        color: #78CFBA;
+    }
     .cancel-btn {
         width: 136px;
         margin-left: 15px;
