@@ -23,6 +23,36 @@
         font-style: normal;
 
     }
+
+    .submit-btn {
+        width: 98px;
+        height: 31px;
+        background-color: #e5e5e5;
+        border: 1px solid #000000;
+        margin-bottom: 30px;
+        margin-top: 10px;
+    }
+
+    .input-field {
+        width: 372px;
+        height: 35px;
+        border: 1px solid #000000;
+        margin-top: 10px;
+    }
+
+    .select_field {
+        background-color: #ffffff;
+        border: 1px solid #000000;
+        width: 160px;
+        height: 35px;
+    }
+
+    .link-form {
+        color: #78CFBA;
+        text-decoration: none;
+       
+    }
+
     a{
         text-decoration: none;
         color: #000000;
@@ -75,8 +105,4 @@
     .team a{
         margin-left: 10px;
     }
-    /********* end footer *********/
-
-    
-
-    
+    /********* end footer ********/

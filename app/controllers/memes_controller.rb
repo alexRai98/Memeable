@@ -6,9 +6,9 @@ class MemesController < ApplicationController
   end 
 
   def create
-    @meme = current_user.memes.new(meme_params) # 1 - 
+    @meme = current_user.memes.new(meme_params) 
     if @meme.save
-      redirect_to root_path #meme_path(@meme)
+      redirect_to meme_path(@meme)
     else
       render :new
     end 
