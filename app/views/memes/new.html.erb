@@ -1,4 +1,4 @@
-<h1>Create a meme!</h1>
+<h1 class= "page_title">Create a meme!</h1>
 <%= form_for(@meme) do |f| %>
   <ul>
   <% @meme.errors.full_messages.each do |error| %>
@@ -6,23 +6,23 @@
   <% end %>
   </ul>
 
-  <p>
-    <%= f.label :title %><br />
+  <p class= "form_field">
+    <div class= "label"><%= f.label :title %><br /></div>
     <%= f.text_field :title %>
   </p>
-  <p>
-    <%= f.label :source %><br />
+  <p class="form_field">
+    <div class= "label"><%= f.label :source %><br /></div>
     <%= f.text_field :source %>
   </p>
-  <p>
-    <%= f.label :type %><br />
+  <p class="form_field">
+    <div class= "label"><%= f.label :type %><br /></div>
     <%= f.select :type, Meme.types.keys.to_a %>
   </p>
-  <p>
-    <%= f.label :category %><br />
+  <p class="form_field"> 
+    <div class= "label"><%= f.label :category %><br /></div>
     <%= f.collection_select :category_id, Category.all, :id, :name%>
   </p>
-  <p>
+  <p class="form_field">
     <%= f.submit %>
   </p>
 <% end %>
