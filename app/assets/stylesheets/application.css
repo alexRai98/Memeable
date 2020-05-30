@@ -13,8 +13,69 @@
  *= require_tree .
  *= require_self
  */
-    body {
+ * {
+    padding: 0;
+    margin: 0;
+    }
+
+    body{ 
         font-family: 'Lilita One';
         font-style: normal;
 
     }
+    a{
+        text-decoration: none;
+        color: #000000;
+    }
+    li{
+        list-style: none;
+    }
+    .main{
+        max-width: 1024px;
+        margin: 0px auto;
+        
+    }
+
+    /********* start navbar *********/
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        border-bottom: 1px #000000 solid;
+        padding-bottom: 10px;
+    }
+    .navbar-logo{
+        width: 100px;
+    }
+    .navbar-menu ul{
+        display: flex;
+        align-items: flex-end;
+    }
+    .navbar-menu li{
+        margin-left: 20px;
+        padding-bottom: 10px;
+    }
+    .navbar-menu a:hover, .team a:hover{
+        color: #78CFBA;
+    }
+    /********* end navbar *********/
+
+    /********* start footer *********/
+    .footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-top: 1px #000000 solid;
+        padding-top: 25px;
+    }
+    .team{
+        display: flex;
+    }
+    .team a{
+        margin-left: 10px;
+    }
+    /********* end footer *********/
+
+    
+
+    
