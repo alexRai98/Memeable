@@ -1,5 +1,5 @@
 <h1 class= "page_title">Create a meme!</h1>
-<%= form_for(@meme) do |f| %>
+<%= form_for(@meme, html: { class:"form" } )do |f| %>
   <ul>
   <% @meme.errors.full_messages.each do |error| %>
     <li><%= error %></li>
@@ -20,7 +20,7 @@
   </p>
   <p class="form_field"> 
     <div class= "label"><%= f.label :category %><br /></div>
-    <%= f.collection_select :category_id, Category.all, :id, :name, {}, :class => "select_field"%>
+    <%= f.collection_select :category_id, Category.all, :id, :name, {}, :class => "select_field category_field"%>
   </p>
   <p class="form_field">
     <%= f.submit "Create!", :class => "submit-btn" %>
