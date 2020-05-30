@@ -1,3 +1,55 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+
+.meme_date{
+    font-size: 24px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 27px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.meme_container {
+    display: flex;
+    flex-flow: row wrap;
+
+}
+
+.meme_img_owner {
+    display: flex;
+    flex-flow: column nowrap;
+    margin-right: 38px;
+    border: 1px solid #000000;
+    margin-bottom: 20px;
+    background-color: #EFF2F1;
+    justify-content: center;
+
+}
+.meme_img_container {
+    max-width: 220px;
+    max-height: 220px;
+    margin: auto;
+}
+
+.meme_img {
+    width:100%;
+    margin: auto;
+    max-height: 200px;
+    display: block;
+}
+
+.meme_owner {
+    background-color: #2f2f2f;
+    color: white;
+    height: 25px;
+    padding-left: 7px;
+    padding-top: 5px;
+}
+.owner_name {
+    color: #78CFBA;
+}
+
