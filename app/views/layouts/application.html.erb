@@ -18,7 +18,7 @@
       <%if user_signed_in?%>
         <%=link_to "Create Meme", new_meme_path%> 
         <p>Welcome, <%=current_user.username%></p>
-        <%=link_to "My Account", edit_user_registration_path%>
+        <%=link_to "My Account", account_details_path%>
         <p><%=link_to "Log Out", destroy_user_session_path, method:"delete"%></p>        
       <%else%>        
         <%=link_to "Login", new_user_session_path %>                
