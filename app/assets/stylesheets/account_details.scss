@@ -1,3 +1,32 @@
 // Place all the styles related to the AccountDetails controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.account-details-title {
+  font-size: 24px;
+  line-height: 50px;
+}
+.account-details-data {
+  font-size: 24px;
+  line-height: 50px;
+  margin: 0 10px;
+}
+.account-details-data a:hover {
+  color: black;
+}
+.account-details-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  line-height: 18px;
+  width: 98px;
+  height: 31px;
+  background-color: #e5e5e5;
+  border: 1px solid #000000;
+  margin-bottom: 30px;
+  margin-top: 10px;
+  font-family: arial;
+}
+.account-details-button:hover {
+  cursor: pointer;
+}
