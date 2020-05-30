@@ -15,10 +15,10 @@
       <header class="navbar">
         <nav class="navbar-menu">
           <ul>
-            <%=link_to image_tag( "logo.svg" ,class: "navbar-logo"), root_path %>
-            <%if user_signed_in?%>
-              <li> <%=link_to "By Category", categories_path%> </li>
-              <li> <%= link_to "By Popularity", root_path %> </li>
+            <%= link_to image_tag( "logo.svg" ,class: "navbar-logo"), root_path%>
+            <li> <%=link_to "By Category", categories_path%> </li>
+            <li> <%= link_to "By Popularity", popular_path %> </li>
+            <%if user_signed_in?%>              
               <li> <%= link_to "Search", root_path %> </li>
               <li> <%= link_to "Create Meme", new_meme_path%> </li>
             <%end%>
@@ -29,8 +29,7 @@
             <%if user_signed_in?%>
               <li> <%=link_to "Log Out", destroy_user_session_path, method: :delete%> </li>
               <li> <span> Welcome, <%= current_user.username%> <span> </li>
-              <li> <%=link_to "My Count", root_path%> </li>
-
+              <li> <%=link_to "My Account", account_details_path%> </li>
             <%else%>
               <li> <%=link_to "Login", new_user_session_path%> </li>
             <%end%>
@@ -44,9 +43,9 @@
       <footer class="footer">
         <div class="team"> 
           <p> Made by: <p>
-          <%= link_to  "alexRai98", "https://github.com/alexRai98" ,target:  "_blank" %>
-          <%= link_to  "gpanedra",  "https://github.com/gpanebra",target:  "_blank" %>
-          <%= link_to  "Saidab1", "https://github.com/Saidab1",target:  "_blank" %>
+          <%= link_to  "Rai", "https://github.com/alexRai98" ,target:  "_blank" %>
+          <%= link_to  "Gustavo",  "https://github.com/gpanebra",target:  "_blank" %>
+          <%= link_to  "Saida", "https://github.com/Saidab1",target:  "_blank" %>
         </div>
         <div class="codeable">
           <p> Codeable #2</p>

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
  
+  get '/account_details', to: 'account_details#index'
   resources :votes, only: [:create ,:destroy]
   get '/categories' ,to: 'memes_by_category#index' 
   root to:'home#index'
